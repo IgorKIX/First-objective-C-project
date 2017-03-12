@@ -70,7 +70,7 @@ Fraction Fraction::operator/(Fraction u)
 }
 Fraction::Fraction(int n,int d)
 {
-    if(d==0) throw range_error("Zerowy mianownik");
+    if(d==0) throw range_error("The denominator cannot by zero");
     numerator = n;
     denominator = d;
     if(denominator<0)
