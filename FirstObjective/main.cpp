@@ -5,24 +5,24 @@ using namespace std;
 void Fr()
 {
 	int a, b, n;
-cout << "Podaj licznik a nastepnie mianownik: ";
+cout << "Write numerator: ";
 cin >> a;
-cout << "Podaj mianownik: ";
+cout << "Write denominator: ";
 cin >> b;
 Fraction x(a,b);
 x.Print();
 cout << "-------" << endl;
-cout << "Reduce: " << endl;
+cout << "Reduced: " << endl;
 x.Reduce();
 x.Print();
-cout << "Podaj licznik a nastepnie mianownik: ";
+cout << "Write numerator: ";
 cin >> a;
-cout << "Podaj mianownik: ";
+cout << "Write denominator: ";
 cin >> b;
 Fraction y(a,b);
 y.Print();
 cout << "-------" << endl;
-cout << "Reduce: " << endl;
+cout << "Reduced " << endl;
 y.Reduce();
 y.Print();
 cout << "Choose what You want to do next: " << endl;
@@ -36,41 +36,31 @@ cin >> n;
 switch (n)
 {
 case 1:
-	if (x == y) cout << "Ulamki sa rowne" << endl;
+	if (x == y) cout << "Fractions are equal" << endl;
 	else if (x > y)
 	{
 		x.Print();
-		cout << " jest wiekszy od ";
+		cout << " > ";
 		y.Print();
 	}
 	else
 	{
 		y.Print();
-		cout << " jest wiekszy od ";
+		cout << " > ";
 		x.Print();
 	}
-	cout << "Napisz";
-	cin >> n;
 	break;
 case 2:
 	x + y;
-	cout << "Napisz";
-	cin >> n;
 	break;
 case 3:
 	x - y;
-	cout << "Napisz";
-	cin >> n;
 	break;
 case 4:
 	x * y;
-	cout << "Napisz";
-	cin >> n;
 	break;
 case 5:
 	x / y;
-	cout << "Napisz";
-	cin >> n;
 	break;
 default:
 	break;
@@ -80,19 +70,19 @@ default:
 //{
 //
 //}
-void Mt()
-{
-	int r, c;
-	cout << "rows: ";
-	cin >> r;
-	cout << "columns: ";
-	cin >> c;
-	Matrix a(r, c);
-	a.Fill();
-	a.Print();
-	cout << "rows: ";
-	cin >> r;
-}
+//void Mt()
+//{
+//	int r, c;
+//	cout << "rows: ";
+//	cin >> r;
+//	cout << "columns: ";
+//	cin >> c;
+//	Matrix a(r, c);
+//	a.Fill();
+//	a.Print();
+//	cout << "rows: ";
+//	cin >> r;
+//}
 int main()
 {
 	int n;
@@ -110,12 +100,13 @@ int main()
 	/*case 2:
 		PaL();
 		break;*/
-	case 3:
-		Mt();
-		break;
+	//case 3:
+	//	Mt();
+	//	break;
 	default:
 		break;
 	}
+	system("pause");
 	return 0;
 }
 

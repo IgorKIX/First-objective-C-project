@@ -29,7 +29,7 @@ bool Fraction::operator>(Fraction u)
 	Fraction help1(numerator, denominator);
 	Fraction help2(u.numerator, u.denominator);
 	help1.Reduce(); help2.Reduce();
-	if (help2.denominator>help1.denominator&&help1.numerator>0) return true;
+	if (help2.denominator<help1.denominator&&help1.numerator>help2.numerator) return true;
 	else return false;
 }
 Fraction Fraction::operator+(Fraction u)
@@ -70,7 +70,7 @@ Fraction Fraction::operator/(Fraction u)
 }
 Fraction::Fraction(int n,int d)
 {
-    if(d==0) throw range_error("Zerowy mianownik");
+    if(d==0) throw range_error(" The denominator cannot by zero");
     numerator = n;
     denominator = d;
     if(denominator<0)

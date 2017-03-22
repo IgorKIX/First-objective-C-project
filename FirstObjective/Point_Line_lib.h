@@ -1,8 +1,14 @@
 #ifndef Point_Line.h
 #define Point_Line.h
-struct Point
+#include<iostream>
+using namespace std;
+
+class Point
 {
-	int a;
-	int b;
+	string name;
+	float x, y;
+public:
+	Point(string = "A", float = 0, float = 0);
+	void read();
 };
 #endif
